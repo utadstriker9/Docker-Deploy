@@ -1,0 +1,3 @@
+# Path related
+raw_data_path: /Users/prakerja/Documents/visionmnc/data/dataset_user_behavior_for_test.csv
+postgre_path: postgresql://vmnc:250999@localhost:5432/vmnc
