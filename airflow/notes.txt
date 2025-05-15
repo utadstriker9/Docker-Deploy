@@ -1,0 +1,14 @@
+### How to run airflow docker locally Astro
+https://medium.com/@pyramidofmerlin/how-to-maker-airflow-be-able-to-manage-files-in-your-local-computer-371ded7d0804 
+1. astro dev object export --compose --> creating compose.yaml
+2. astro dev start --compose-file docker-compose.override.yaml
+
+# Airflow GIT Sync
+https://github.com/data-burst/airflow-git-sync
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent 
+
+# Step by Step to restart container
+1. sudo docker rm $(sudo docker ps -a | grep airflow-projects_d12e19 | awk '{print $1}') # for delete all container related to airflow  
+2. sudo docker system prune -a #for delete caches and all images, network all exclude volumes
+
+3.  sudo astro dev start --compose-file compose.yaml # Run again container
