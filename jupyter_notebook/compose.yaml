@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    container_name: jupyter_notebook
+    restart: always
+    ports:
+      - "8981:8888"
+    volumes:
+      - /home/timdata/jupyter_notebook/notebooks:/home/jovyan/work:z
+      - /home/timdata/jupyter_notebook/config/jupyter_server_config.py:/home/jovyan/.jupyter/jupyter_server_config.py
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - JUPYTER_ALLOW_INSECURE_WRITES=true
+    user: root
+    command: start-notebook.sh --allow-root
+

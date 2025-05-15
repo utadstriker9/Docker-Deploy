@@ -1,0 +1,8 @@
+pandas==1.5.3
+pygsheets==2.0.6
+boto3==1.26.75
+smart-open==6.4.0
+urllib3==1.26.14
+SQLAlchemy==2.0.22
+redshift-connector==2.0.910
+mysql-connector-python==8.0.32
